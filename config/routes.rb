@@ -5,22 +5,23 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   # read all
-  get "tasks", to: "tasks#index"
+  get 'tasks', to: 'tasks#index'
+
+  # new
+  get 'tasks/new', to: 'tasks#new'
 
   # create
-  get "tasks/new", to: "tasks#new"
-  post "tasks", to: "tasks#create"
+  post 'tasks', to: 'tasks#create'
 
-  #show
-  get "tasks/:id", to: "tasks#show", as: :task
+  # show
+  get 'tasks/:id', to: 'tasks#show', as: :task
 
-  #edit
-  get "tasks/:id/edit", to: "tasks#edit"
+  # edit
+  get 'tasks/:id/edit', to: 'tasks#edit'
 
-  #update
-  patch "tasks/:id", to: "tasks#update"
+  # update
+  patch 'tasks/:id', to: 'tasks#update'
 
-  #delete
-  delete "tasks/:id", to: "tasks#destroy"
-
+  # destroy
+  delete 'tasks/:id', to: 'tasks#destroy'
 end
