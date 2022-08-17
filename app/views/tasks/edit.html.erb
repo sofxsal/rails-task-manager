@@ -1,12 +1,6 @@
-<h1>Edit task</h1>
+<h1>Edit Task</h1>
 
-<%= form_for(@task) do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title %>
-  <%= f.label :details %>
-  <%= f.text_field :details %>
-  <%= f.submit %>
-<% end %>
-<br>
-<br>
-<%= link_to "Back to Tasks", tasks_path  %>
+<%= render "form", task: @task %>
+<p>Check to mark form as done</p>
+
+<%= link_to "back to all tasks", tasks_path %>
